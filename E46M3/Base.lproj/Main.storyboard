@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1314" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VEM-qI-7i1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="E46M3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,616 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ULf-xL-4Qw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image-1" translatesAutoresizingMaskIntoConstraints="NO" id="qHg-pS-x17">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="120.5"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jU-LG-BSq">
+                                        <rect key="frame" x="0.0" y="120.5" width="375" height="121"/>
+                                        <color key="backgroundColor" red="0.056281037628650665" green="0.58685612678527832" blue="0.81710261106491089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Torque Specs">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="navMPCs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rb2-Nn-nMK"/>
+                                            <segue destination="Jd7-15-hhE" kind="show" id="XWR-3F-tEf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b08-jG-cTj">
+                                        <rect key="frame" x="0.0" y="241.5" width="375" height="120"/>
+                                        <color key="backgroundColor" red="0.19275262951850891" green="0.28048959374427795" blue="0.59515565633773804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Fluids &amp; Capacities">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Is7-YS-xmS" kind="show" id="4cE-0t-lBL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRf-f4-G7c">
+                                        <rect key="frame" x="0.0" y="361.5" width="375" height="121"/>
+                                        <color key="backgroundColor" red="0.81669849157333374" green="0.088469915091991425" blue="0.10218042880296707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Codes">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="tUV-1V-7PN" kind="show" id="hej-kg-ml5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhx-g1-Jts">
+                                        <rect key="frame" x="0.0" y="482.5" width="375" height="120.5"/>
+                                        <state key="normal" title="Wheels &amp; Tires" backgroundImage="Image"/>
+                                        <connections>
+                                            <segue destination="I7Z-CZ-uYB" kind="show" id="fua-k3-1ux"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jhx-g1-Jts" secondAttribute="trailing" id="0aL-dP-ylc"/>
+                                    <constraint firstItem="jhx-g1-Jts" firstAttribute="leading" secondItem="ULf-xL-4Qw" secondAttribute="leading" id="0dY-9u-a1i"/>
+                                    <constraint firstItem="b08-jG-cTj" firstAttribute="top" secondItem="1jU-LG-BSq" secondAttribute="bottom" id="1K6-Pm-4Se"/>
+                                    <constraint firstItem="1jU-LG-BSq" firstAttribute="height" secondItem="qHg-pS-x17" secondAttribute="height" id="2UN-B6-G1a"/>
+                                    <constraint firstAttribute="trailing" secondItem="1jU-LG-BSq" secondAttribute="trailing" id="2cP-WB-r4q"/>
+                                    <constraint firstAttribute="trailing" secondItem="qHg-pS-x17" secondAttribute="trailing" id="5DR-tE-s7w"/>
+                                    <constraint firstItem="b08-jG-cTj" firstAttribute="leading" secondItem="ULf-xL-4Qw" secondAttribute="leading" id="Gdv-sd-gWt"/>
+                                    <constraint firstItem="qHg-pS-x17" firstAttribute="top" secondItem="ULf-xL-4Qw" secondAttribute="top" id="Hz4-Yb-rLD"/>
+                                    <constraint firstItem="1jU-LG-BSq" firstAttribute="width" secondItem="ULf-xL-4Qw" secondAttribute="width" id="LgU-C6-26f"/>
+                                    <constraint firstItem="qHg-pS-x17" firstAttribute="leading" secondItem="ULf-xL-4Qw" secondAttribute="leading" id="LrA-H8-dym"/>
+                                    <constraint firstItem="jhx-g1-Jts" firstAttribute="top" secondItem="NRf-f4-G7c" secondAttribute="bottom" id="NFt-zZ-yS2"/>
+                                    <constraint firstItem="1jU-LG-BSq" firstAttribute="leading" secondItem="ULf-xL-4Qw" secondAttribute="leading" id="O3n-yb-PZq"/>
+                                    <constraint firstAttribute="trailing" secondItem="b08-jG-cTj" secondAttribute="trailing" id="QIv-R8-nTP"/>
+                                    <constraint firstItem="NRf-f4-G7c" firstAttribute="height" secondItem="qHg-pS-x17" secondAttribute="height" id="RTl-qn-UJE"/>
+                                    <constraint firstAttribute="bottom" secondItem="jhx-g1-Jts" secondAttribute="bottom" id="TDD-PF-7Gb"/>
+                                    <constraint firstItem="jhx-g1-Jts" firstAttribute="height" secondItem="qHg-pS-x17" secondAttribute="height" id="aop-jy-xOd"/>
+                                    <constraint firstItem="b08-jG-cTj" firstAttribute="width" secondItem="ULf-xL-4Qw" secondAttribute="width" id="dCs-8K-hh6"/>
+                                    <constraint firstItem="b08-jG-cTj" firstAttribute="height" secondItem="qHg-pS-x17" secondAttribute="height" id="eZB-BR-x7F"/>
+                                    <constraint firstItem="NRf-f4-G7c" firstAttribute="top" secondItem="b08-jG-cTj" secondAttribute="bottom" id="ekv-O2-q4f"/>
+                                    <constraint firstItem="jhx-g1-Jts" firstAttribute="top" secondItem="NRf-f4-G7c" secondAttribute="bottom" id="fEs-Ft-CMy"/>
+                                    <constraint firstAttribute="trailing" secondItem="NRf-f4-G7c" secondAttribute="trailing" id="leu-v6-vqj"/>
+                                    <constraint firstItem="b08-jG-cTj" firstAttribute="top" secondItem="1jU-LG-BSq" secondAttribute="bottom" id="lhc-KR-Bnr"/>
+                                    <constraint firstItem="NRf-f4-G7c" firstAttribute="top" secondItem="b08-jG-cTj" secondAttribute="bottom" id="oON-Dw-SrZ"/>
+                                    <constraint firstItem="1jU-LG-BSq" firstAttribute="top" secondItem="qHg-pS-x17" secondAttribute="bottom" id="qIR-H8-Pd3"/>
+                                    <constraint firstItem="NRf-f4-G7c" firstAttribute="width" secondItem="ULf-xL-4Qw" secondAttribute="width" id="tAN-Pj-UH9"/>
+                                    <constraint firstItem="qHg-pS-x17" firstAttribute="width" secondItem="ULf-xL-4Qw" secondAttribute="width" id="tPR-ZY-q6u"/>
+                                    <constraint firstItem="1jU-LG-BSq" firstAttribute="top" secondItem="qHg-pS-x17" secondAttribute="bottom" id="uiq-3O-vWz"/>
+                                    <constraint firstItem="NRf-f4-G7c" firstAttribute="leading" secondItem="ULf-xL-4Qw" secondAttribute="leading" id="vNO-Zr-xHz"/>
+                                    <constraint firstItem="jhx-g1-Jts" firstAttribute="width" secondItem="ULf-xL-4Qw" secondAttribute="width" id="vvF-Mv-w3N"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ULf-xL-4Qw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="54l-sz-ZiK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ULf-xL-4Qw" secondAttribute="bottom" id="BqH-az-b3Z"/>
+                            <constraint firstAttribute="trailing" secondItem="ULf-xL-4Qw" secondAttribute="trailing" id="h6p-H9-QaK"/>
+                            <constraint firstItem="ULf-xL-4Qw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sto-oQ-wG9"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hLy-zO-xie"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8Us-jf-ynY">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Is7-YS-xmS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lTd-4H-Q9I"/>
+                        <viewControllerLayoutGuide type="bottom" id="fEs-sw-dwC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1dX-f4-7K2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZ6-Ak-gkI">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Fluids and Capacities
+
+Engine oil: SAE 10W-60 (5.5 quarts)
+
+Transmission Fluid: 75W80 (2 quarts)
+
+Brake Fluid: DOT 4
+
+Differential Fluid: SAF-XJ+FM (1.2 quarts)
+
+Coolant: (9.9 quarts)
+
+Battery Size: 94R
+
+Hydraulic Fluid (SMG): Pentosin CHS11F
+
+***Capacities are either technical or estimates***
+</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xh0-EJ-J6A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2004" y="-82.3088455772114"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lSV-JU-ZaL">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="tUV-1V-7PN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="h16-Re-h9h"/>
+                        <viewControllerLayoutGuide type="bottom" id="TEW-ks-egz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ep0-2T-AgX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWz-HK-wJ8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">Codes
+
+1 Fuel Pump Relay
+2 Idle Speed Actuator- Closing Coil
+3 Fuel Injector Cyl 1
+4 Fuel Injector Cyl 3
+5 Fuel Injector Cyl 2
+7 Intake Cam Position Sensor Bank 1
+8 Intake Cam Position Sensor Bank 2
+9 Knock Sensor- Cyl 1-2
+10 Exhaust Cam Position Sensor Bank 1
+11 Exhaust Cam Position Sensor Bank 2
+12 Lambda Sensor Signal- Pre Cat Bank 2
+13 Lambda Sensor Signal- Pre Cat Bank 1
+14 DMTL Heating
+15 Camshaft Sensor Bank 1 Synchronisation
+16 Crankshaft Sensor
+19 Aux Air Pump Relay
+20 Starter Relay
+21 VANOS Retard Valve- Exhaust Bank 1
+22 VANOS Advance Valve- Exhaust Bank 1
+23 Ignition Coil- Cyl 2
+24 Ignition Coil- Cyl 3
+25 Ignition Coil- Cyl 1
+26 Ignition Coil- Cyl 8
+27 DMTL Changeover Valve
+29 Idle Speed Control Valve NC Coil
+30 Internal DME Fault
+31 Fuel Injector Cyl 5
+32 Fuel Injector Cyl 6
+33 Fuel Injector Cyl 4
+34 Fuel Injector Cyl 7
+35 Fuel Injector Cyl 8
+36 Tank Vent Valve
+37 Lambda Sensor Heater Pre Cat Bank 1
+38 Lambda Sensor Heater Pre Cat Bank 2
+39 Lambda Sensor Heater Post Cat Bank 1
+40 Lambda Sensor Heater Post Cat Bank 2
+41 Mass Air Flow Sensor Right
+42 Road Speed Signal
+43 Temperature Sensor Signal- Radiator Outlet
+44 Oil Level Sensor Signal
+45 Electronic Throttle Motor MDK
+47 Engine Speed Signal TD
+48 AirCon Control Module
+49 Internal Index 95
+50 Ignition Coil- Cyl 4
+51 Ignition Coil- Cyl 6
+52 Ignition Coil- Cyl 5
+53 Electric Fan
+54 System Voltage Main Relay
+55 Ignition Coil- Cyl 7
+57 Mass Air Flow Sensor Left
+58 Sensor Voltage Supply
+59 Sensor Voltage Supply
+60 Throttle Pedal Position Sensor 1
+61 Throttle Pedal Position Sensor 2
+63 Aux Air Valve
+65 Throttle and Electric Throttle Actuator Potentiometer
+66 DME-EWS Communication
+67 VANOS Advance Valve- Inlet Bank 1
+69 Knock Sensor Cyl 3-4
+70 Knock Sensor Cyl 7-8
+71 Knock Sensor Cyl 5-6
+72 VANOS Retard Valve- Inlet Bank 1
+73 Mass Air Flow Sensor Implausible
+74 VANOS Advance Valve- Inlet Bank 2
+75 VANOS Retard Valve- Inlet Bank 2
+76 Ambient Air Pressure Sensor (DME Internal)
+77 Intake Air Temperature Sensor
+78 Engine Coolant Temperature Sensor
+79 Exhaust Gas Temperature Sensor
+80 Gear Detection Switch
+81 Multifunction Steering Wheel(E39)/Steering Column Lever(Z8)
+83 VANOS Advance Valve- Exhaust Bank 2
+84 VANOS Advance Valve- Exhaust Bank 2
+85 Throttle Position Sensor
+86 CAN Bus Signal
+87 Lambda Sensor Post Cat Bank 1
+88 Lambda Sensor Post Cat Bank 2
+89 Internal DME Fault
+92 Lambda Sensor Post Cat Bank 1 Voltage Monitoring
+93 Lambda Sensor Post Cat Bank 2 Voltage Monitoring
+99 Internal DME Fault
+100 Tyre Pressure Front Left
+101 Tyre Pressure Front Right
+102 Tyre Pressure Rear Right
+103 Tyre Pressure Rear Left
+105 Engine Coolant Temperature Implausible
+106 Brake Light Switch
+107 Electronic Throttle Self Test
+108 Oil Circuit Changeover Valve Left
+109 Oil Circuit Changeover Valve Right
+110 Function Light Switch Vehicle Dynamics
+111 Throttle Pedal Position Sensor Comparison
+112 Throttle Pedal Position Sensor Comparison
+113 Inlet VANOS Bank 2 Function
+114 Exhaust VANOS Bank 2 Function
+115 Control Module Temperature or Tyre Pressure Control Button
+116 Servotronic Valve
+117 Servotronic- Road speed Signal
+118 Electronic Throttle Potentiometer Bank 1
+119 Electronic Throttle Potentiometer Bank 2
+120 Electronic Throttle Potentiometer Comparison
+121 Electronic Throttle Both Potentiometers Faulty
+122 DME Internal Processor Check
+125 Oil Level Sensor Lamp
+126 Electric Fuel Pump Crash Deactivation
+127 DMTL Module
+128 Deviation Idle Speed
+129 Cat Protection Function- Empty Tank or Low Fuel
+130 EWS 3.3 Anti Tampering Protection
+131 DSC Intervention Implausible
+132 CAN Timeout DSC
+133 CAN Timeout Steering Angle Sensor
+134 CAN Timeout Instrument Cluster
+135 Road Speed Signal
+136 Idle Speed Control Function
+139 Interruption Cruise Control Operation
+140 Knock Control Deactivated/Knock Protection
+141 Tank Fill Level Implausible
+143 E-box Fan
+144 Lambda Sensor Control Bank 1
+145 Lambda Sensor Control Bank 2
+149 Fuel Level
+150 DME Memory Fault
+151 Internal DME Fault
+155 Saving Adaptation Values not Possible
+156 Saving Adaptation Values not Possible
+157 DME Memory Fault
+158 Reset DME Over Speed
+159 Internal DME Fault Knock Control
+160 Internal DME Fault Knock Control
+161 Internal DME Fault Knock Control
+162 Camshaft Sensor Bank 2 Synchronisation
+163 Reset DME Over Speed
+170 Aux Air Quantity too Low
+171 Aux Air Valve Jammed
+172 VANOS Admission Pressure Pump
+173 Continuous Signal Starter Switch
+174 Fuel System Diagnosis Bank 1
+175 Fuel System Diagnosis Bank 2
+176 Abort Tank Leak Diagnosis due to Moisture
+178 Catalytic Converter Efficiency Bank 1
+179 Catalytic Converter Efficiency Bank 2
+180 Tank Leak Detected
+181 Fuel Filler Cap Open
+182 Internal DME Fault
+183 Internal DME Fault
+184 Inlet VANOS Bank 1 Function
+185 Exhaust VANOS Bank 1 Function
+194 Electronic Throttle Limp Mode from Cruise Control
+195 Deviation Setpoint Torque from Actual Torque
+196 Misfire Cyl 1 with Cyl Cutout
+197 Misfire Cyl 2 with Cyl Cutout
+198 Misfire Cyl 3 with Cyl Cutout
+199 Misfire Cyl 4 with Cyl Cutout
+200 Misfire Cyl 5 with Cyl Cutout
+201 Misfire Cyl 6 with Cyl Cutout
+202 Misfire Cyl 7 with Cyl Cutout
+203 Misfire Cyl 8 with Cyl Cutout
+204 Misfire Multiple Cylinders with Cyl Cutout
+205 Misfire Cyl 1 without Cyl Cutout
+206 Misfire Cyl 2 without Cyl Cutout
+207 Misfire Cyl 3 without Cyl Cutout
+208 Misfire Cyl 4 without Cyl Cutout
+209 Misfire Cyl 5 without Cyl Cutout
+210 Misfire Cyl 6 without Cyl Cutout
+211 Misfire Cyl 7 without Cyl Cutout
+212 Misfire Cyl 8 without Cyl Cutout
+213 Misfire Multiple Cylinders without Cyl Cutout
+214 Lambda Sensor Pre Cat Bank 1 Period Duration
+215 Lambda Sensor Pre Cat Bank 2 Period Duration
+216 Lambda Sensor Pre Cat Bank 1 Flip Time
+217 Lambda Sensor Pre Cat Bank 2 Flip Time
+218 Lambda Sensor Pre Cat Bank 1 Signal Excursion
+219 Lambda Sensor Pre Cat Bank 2 Signal Excursion
+220 DME Internal Processor Check
+228 Electronic Throttle Limit Violation
+230 Electronic Throttle Setpoint/Actual Value Deviation
+231 DME Internal Processor Check
+232 Tank Vent Valve Function Check
+247 VANOS Pressure Accumulator Valve</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GSb-BI-8vy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2004" y="589.65517241379314"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l2Z-R9-fdl">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="I7Z-CZ-uYB" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mNY-YS-TzN"/>
+                        <viewControllerLayoutGuide type="bottom" id="1QQ-Tp-7xV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ciS-mp-pfk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kg1-Rd-Nhf">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">Wheels &amp; Tires Specifications
+
+18” Option:
+
+Front: 225/45R18	Rim: 8x18 ET47
+Rear: 255/40R18	Rim: 9x18 ET26
+
+19” Option:
+
+Front: 255/35R19	Rim:9.5x19 ET47
+Rear: 255/35R19	Rim: 8x19 ET47
+
+Staggered pairs that work well together:
+
+18":
+
+225/45/18, circumference: 81.6"
+and
+255/40/18, circumference: 81.8"
+
+235/40/18, circumference: 79.8"
+and
+265/35/18, circumference: 79.5"
+
+245/40/18, circumference: 80.8"
+and
+275/35/18, circumference: 80.4"
+
+255/40/18, circumference: 81.8"
+and
+285/35/18, circumference: 81.2"
+
+255/40/18, circumference: 81.8"
+and
+295/35/18, circumference: 82.1"
+
+
+19":
+
+225/40/19, circumference: 82.0"and 
+255/35/19, circumference: 81.8"
+
+235/35/19, circumference: 80.0"
+and
+265/30/19, circumference: 79.4"
+
+245/35/19, circumference: 80.9"
+and
+275/30/19, circumference: 80.1"
+
+245/35/19, circumference: 80.9"
+and
+285/30/19, circumference: 80.8"
+
+255/35/19, circumference: 81.8"
+and
+285/30/19, circumference: 80.8"
+
+
+
+Square setups that work:
+
+225/45/18, circumference: 81.6"
+
+235/40/18, circumference: 79.8"
+
+245/40/18, circumference: 80.8"
+
+255/40/18, circumference: 81.8"
+
+265/35/18, circumference: 79.5"
+
+275/35/18, circumference: 80.4"
+
+285/35/18, circumference: 81.2"
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vop-a3-oxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1999.2" y="1272.4137931034484"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nMT-C0-FKQ">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Jd7-15-hhE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rNY-wE-qeW"/>
+                        <viewControllerLayoutGuide type="bottom" id="ka8-Yc-WUa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zjg-dT-h6b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lha-d6-swL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="611"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Engine
+Oil drain plug: 18 ft-lbs
+Oil filter housing cap bolt: 24 ft-lbs
+Banjo bolt (side of valve cover): 18 ft-lbs (25 Nm)
+Spark Plugs: 16 ft-lbs (22 Nm)
+Cam Bolts: 10.3 ft-lbs (14 Nm )
+Chain Tensioner bolt: 32mm 51.6 ft-lb (70nm)
+Cylinder head bolts: E14 22.1 ft-lb (30nm)/90 degrees/90 degrees (see explanation in thread)
+Engine mounts: 37 ft-lbs (49 Nm)
+VANOS filter bolt: 20 ft-lbs
+Oil pan bolts - 8.8 grade - 89 in-lbs (10 Nm)
+10.9 grade - 106 in-lbs (12 Nm)
+Tensioner: 18 ft. lbs. (24 Nm)
+Idler Pulley: 33 ft. lbs (45 Nm)
+Harmonic balancer M12x110 bolts: 44 ft-lbs (60 Nm) then 50 degrees and 50 degrees
+Plastic ///M cover over valve cover: 89 in-lbs (10 Nm) 
+
+Front Suspension/Brakes
+brake caliper mounting bracket to spindle: 81 ft-lbs (110 Nm)
+brake caliper guide pins: 22 ft-lbs (30 Nm)
+strut tower nuts: 25-26 ft-lbs (35 Nm)
+strut bar nuts: 18 ft-lbs (24Nm)
+lower strut slip-fit to kingpin/clamshell bolt: 60 ft-lbs (81 Nm)
+control arm ball joint: 66 ft-lbs (90 Nm) 
+control arm at steering knuckle: (65 Nm)
+control arm bushing bracket: 44 ft-lbs (60 Nm)
+tierods: 
+aluminum subframe brace/underplate: 43.5 ft-lbs plus 45-90 degree turn
+
+Rear Suspension/Differential
+rear trailing arm bracket to car body: 57 ft-lbs (77 Nm)
+rear trailing arm/rtab bushing thru bolt: 81 ft-lbs (if using stock rtab, tighten bushing bolt with trailing arm at proper angle to avoid bushing preload)
+rear shock mount upper bolts: 21 ft-lbs
+rear shock lower bolt: 74 ft-lbs (100 Nm) in loaded position
+rear lower control arm to trailing arm bolt: 81 ft-lbs (110 Nm)
+rear v-brace: 44 ft-lbs (59 Nm) + 90 degrees
+front subframe bolts: 81 ft-lbs (110 Nm)
+rear subframe bolts: 57 ft-lbs (77 Nm)
+1 front diff mount bolt: 148 ft-lbs (200 Nm)
+2 rear diff mount bolts: 15 ft-lbs (20 Nm) + 90 degrees
+Differential drain and fill plugs:
+- with o-ring - 44 ft-lbs (60 Nm)
+- with sealing washer - 48 ft-lbs (65 Nm)
+- type not specified - 52 ft-lbs (70 Nm)
+
+Transmission and Driveshaft
+guibo to transmission/driveshaft: M12 - 85 ft-lbs (115 Nm)
+center support bearing to body: 15 ft-lbs (20 Nm)
+driveshaft to differential flange: 52 ft-lbs (70 Nm)
+
+
+Transmission mounting
+Class 8.8:
+2ea. M12x50 (12 &amp; 1 o'clock positions looking fwd) - 65 ft-lbs
+2ea. M12x90 (4 &amp; 9 o'clock positions looking fwd) - 65 ft-lbs
+3ea. M8x50 (5, 6 &amp; 8 o'clock positions looking fwd) - 22 ft-lbs
+2ea. M10x65 (starter bolts) - 40 ft-lbs
+1ea. M6 Hex for shield (3 o'clock position looking fwd) - 'Goodntight' 7ft-lbs
+
+
+Exhaust
+Flange bolts from Section 2 to your muffler: 11ft-lbs (15Nm)
+Muffler hanger to muffler: 15ft-lbs (20Nm)
+Muffler hanger to chassis: 16ft-lbs (22Nm)
+
+
+Miscellaneous
+wheel bolts: 88 ft-lbs (120 Nm)
+steering coupler ET10 bolts: 16 ft-lbs (22 Nm)
+steering wheel locking nut: 46 ft-lbs (63 Nm)
+
+Cylinder head torque procedure:
+1. Torque cylinder head bolts to 30 N-m in the following order:
+
+
+2. Torque each bolt 90 degrees in the same order. 
+
+3. Torque each bolt 90 degrees one final time in the same order.
+
+======================
+multiply ft-lbs by 1.356 to get N-m
+
+multiply N-m by 0.738 to get ft-lbs</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFp-HT-ADa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2004" y="-788.45577211394311"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2tm-d5-kGz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VEM-qI-7i1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oQF-Rd-eXK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bTV-cf-iJe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zVI-8G-9sW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="1505" height="525"/>
+        <image name="Image-1" width="1067" height="321"/>
+    </resources>
 </document>
